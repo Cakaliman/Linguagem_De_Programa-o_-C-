@@ -3,16 +3,17 @@
 //Entrada: um número n qualquer
 //Saída: somatória dos n prmeiros termos da série de frações
 
-int serie (int n);
+float serie (int n);
 int main(void){
-    int x, y;
+    int x; 
+    float y;
     scanf("%d", &x);
     y = serie(x);
-    printf("%d", y);
+    printf("%f", y);
     return 0;
 }
 
-int serie (int n){
-    if n==1 return 1;
-    return serie(n-1) + 1/n;
+float serie (int n){
+    if (n==1) return 1.00;
+    return serie(n-1) + (1/n);
 }
